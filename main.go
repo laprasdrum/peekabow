@@ -8,6 +8,7 @@ import (
 	"io/ioutil"
 	"net/http"
 	"os"
+	"os/user"
 	"strconv"
 	"strings"
 
@@ -81,7 +82,7 @@ func (self Pipelines) Find(f func(Pipeline) bool) (Pipeline, bool) {
 }
 
 var (
-	tomlData     = "config.toml"
+	tomlData     string
 	github       *githubql.Client
 	owner        string
 	repo         string
@@ -89,6 +90,9 @@ var (
 )
 
 func main() {
+	user, _ := user.Current()
+	tomlData = user.HomeDir + "/.config/peekabow/config.toml"
+
 	app := cli.NewApp()
 	app.Name = appName
 	app.Usage = appUsage
