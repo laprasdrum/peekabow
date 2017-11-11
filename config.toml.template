@@ -1,4 +1,4 @@
-# Fill in your tokens and rename this file "config.toml"
+# Fill in your tokens, rename this file "config.toml", move to "$HOME/.config/peekabow"
 
 [token]
 github = "<generated token from https://github.com/settings/tokens/new>"
