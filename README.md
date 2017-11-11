@@ -1,7 +1,5 @@
 ## peekabow
 
-Peek your repo's summary of ZenHub pipeline :baby:
-
 If you have ZenHub board such as:
 
 ![sample board](./.github/img/board.png)
