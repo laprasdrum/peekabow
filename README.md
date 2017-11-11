@@ -3,12 +3,14 @@
 Peek your repo's summary of ZenHub pipeline :baby:
 
 If you have ZenHub board such as:
+
 ![sample board](./.github/img/board.png)
 
 Then you can show the summary of pipeline:
 
 ```
-$ peekabow --owner laprasdrum --repo kaptam -pipeline Inbox issues                       🔽  laprasdrum/kaptam: Inbox's issues here:
+$ peekabow --owner laprasdrum --repo kaptam -pipeline Inbox issues
+🔽  laprasdrum/kaptam: Inbox's issues here:
 #1: This is Sample Issue 😄 : https://github.com/laprasdrum/kaptam/issues/1
 #2: Also Here 👀 : https://github.com/laprasdrum/kaptam/issues/2
 ```
