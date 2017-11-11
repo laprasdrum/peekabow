@@ -8,11 +8,11 @@ import (
 	"io/ioutil"
 	"net/http"
 	"os"
-	"os/user"
 	"strconv"
 	"strings"
 
 	"github.com/BurntSushi/toml"
+	"github.com/mitchellh/go-homedir"
 	"github.com/shurcooL/githubql"
 	"github.com/urfave/cli"
 	"golang.org/x/oauth2"
@@ -90,8 +90,11 @@ var (
 )
 
 func main() {
-	user, _ := user.Current()
-	tomlData = user.HomeDir + "/.config/peekabow/config.toml"
+	home, err := homedir.Dir()
+	if err != nil {
+		panic(err)
+	}
+	tomlData = home + "/.config/peekabow/config.toml"
 
 	app := cli.NewApp()
 	app.Name = appName
