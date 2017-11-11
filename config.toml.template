@@ -1,0 +1,5 @@
+# Fill in your tokens and rename this file "config.toml"
+
+[token]
+github = "<generated token from https://github.com/settings/tokens/new>"
+zenhub = "<generaeted token from https://dashboard.zenhub.io/#/settings>"
